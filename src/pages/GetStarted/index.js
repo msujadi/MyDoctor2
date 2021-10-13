@@ -2,8 +2,14 @@ import React from 'react';
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import {ILGetStarted, ILLogo} from '../../assets';
 import {Button, Gap} from '../../components';
+<<<<<<< HEAD
+import {colors, fonts} from '../../utils';
+
+function GetStarted({navigation}) {
+=======
 
 function GetStarted() {
+>>>>>>> 20a98ddac87308b684aa0a142bf1acb470177752
   return (
     <ImageBackground source={ILGetStarted} style={styles.page}>
       <View>
@@ -13,9 +19,22 @@ function GetStarted() {
         </Text>
       </View>
       <View>
+<<<<<<< HEAD
+        <Button
+          title="Get Started"
+          onPress={() => navigation.navigate('Register')}
+        />
+        <Gap height={16} />
+        <Button
+          type="secondary"
+          title="Sign In"
+          onPress={() => navigation.navigate('Login')}
+        />
+=======
         <Button title="Get Started" />
         <Gap height={16} />
         <Button type="secondary" title="Sign In" />
+>>>>>>> 20a98ddac87308b684aa0a142bf1acb470177752
       </View>
     </ImageBackground>
   );
@@ -28,12 +47,12 @@ const styles = StyleSheet.create({
     padding: 40,
     justifyContent: 'space-between',
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
   },
   title: {
     fontSize: 28,
-    fontFamily: 'Nunito-SemiBold',
-    color: 'white',
+    fontFamily: fonts.primary[600],
+    color: colors.white,
     marginTop: 91,
   },
 });
